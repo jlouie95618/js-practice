@@ -15,7 +15,7 @@ InboxSDK.load('1', 'stripe').then(function(sdk) {
 		var contacts = threadRowView.getContacts();
 		for (var i = 0; i < contacts.length; i++) {
 			var contact = contacts[i];
-      getStripeCustomerWithoutMyDomain(contact, sdk.User.getEmailAddress()).then(function(customer) {
+	        getStripeCustomerWithoutMyDomain(contact, sdk.User.getEmailAddress()).then(function(customer) {
 				if (customer != null) {
 					addStripeIndicatorToThreadRow(threadRowView, contact.emailAddress);
 				}
@@ -40,9 +40,9 @@ InboxSDK.load('1', 'stripe').then(function(sdk) {
 			seenSidebarEmails.get(threadView).push(contact.emailAddress);
 
 
-      getStripeCustomerWithoutMyDomain(contact, sdk.User.getEmailAddress()).then(function(customer) {
+	        getStripeCustomerWithoutMyDomain(contact, sdk.User.getEmailAddress()).then(function(customer) {
 				if (customer != null) {
-          addStripeSidebar(threadView, customer);
+          			addStripeSidebar(threadView, customer);
 				}
 			});
 		}
