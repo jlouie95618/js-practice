@@ -5,6 +5,10 @@
   "icons": {
     "128": "images/stripe.png"
   },
+  "background": 
+  {
+    "scripts": ["jquery.js"]
+  },
   "content_scripts": [
     {
       "matches": [
